@@ -19,6 +19,13 @@
   Borrar ultimo heroe
 </button>
 
+<button
+  *ngIf="heroNames.length === 0"
+  (click)="resetListHeroes()"
+  class="btn btn-outline-primary">
+  Resetear
+</button>
+
 <ul class="mt-2 list-group">
 
   <li *ngFor="let name of heroNames"

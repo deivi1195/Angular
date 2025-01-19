@@ -16,5 +16,7 @@ export class ListComponent {
     this.deletedHero = this.heroNames.pop();
   }
 
-
+  resetListHeroes(): void {
+    this.heroNames = ['Spiderman', 'Ironman', 'Hulk', 'She Hulk', 'Thor']
+  }
 }
