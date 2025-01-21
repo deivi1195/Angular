@@ -1,6 +1,9 @@
 import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { Character } from '../../interfaces/character.interface';
 
+import { v4 as uuid } from 'uuid';
+import { DbzService } from '../../Services/bdz.service';
+
 @Component({
   selector: 'dbz-list',
   standalone: false,
@@ -17,9 +20,10 @@ export class ListComponent {
   }];
 
   @Output()
-  onDelete: EventEmitter<number> = new EventEmitter();
+  onDelete: EventEmitter<string> = new EventEmitter();
 
-  onDeleteCharacter( index: number ): void {
-    this.onDelete.emit( index );
+  onDeleteCharacter( id: string ): void {
+
+    this.onDelete.emit( id );
   }
 }

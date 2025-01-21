@@ -20,10 +20,17 @@
     </div>
 
     <button
-      (click)="onDeleteCharacter(i)"
+      *ngIf="character.id"
+      (click)="onDeleteCharacter( character.id )"
       class="btn btn-danger">
       X
     </button>
 
+
+
   </li>
+
+
 </ul>
+
+
