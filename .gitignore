@@ -1,0 +1,3 @@
+echo "node_modules/" > .gitignore
+echo ".angular/" >> .gitignore
+echo "dist/" >> .gitignore
